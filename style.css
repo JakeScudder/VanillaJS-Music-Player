@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Krona One", sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    rgb(14, 132, 196) 15%,
+    rgb(235, 240, 230) 87%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-container {
+  width: 85%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  display: flex;
+  margin-top: 125px;
+  padding-top: 20px;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+}
+
+.img-container {
+  height: 250px;
+  min-width: 250px;
+  max-width: 80%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.img-container img {
+  height: 300px;
+  border-radius: 15px;
+  animation: slideImage 40s infinite;
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes slideImage {
+  0% {
+    opacity: 0.8;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    transform: scale3d(1.5, 1.5, 1.5) translate3d(-100px, -60px, 0px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+    opacity: 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.action-btn {
+  background-color: #fff;
+  border: 0;
+  color: rgb(87, 86, 86);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.action-btn-big {
+  color: rgb(81, 191, 255);
+  font-size: 30px;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+.music-info {
+  width: 90%;
+  background-color: rgba(32, 33, 32, 0.4);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+#title {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 5px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress {
+  background-color: rgb(23, 155, 199);
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
