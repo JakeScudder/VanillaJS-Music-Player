@@ -19,6 +19,12 @@ body {
   justify-content: center;
 }
 
+#app-title {
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 1.75rem;
+}
+
 .music-container {
   width: 85%;
   max-width: 1000px;
@@ -26,7 +32,8 @@ body {
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
   display: flex;
-  margin-top: 125px;
+  margin-top: 80px;
+  margin-bottom: 50px;
   padding-top: 20px;
   flex-direction: column;
   position: relative;
@@ -123,7 +130,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
-  height: 5px;
+  height: 10px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
