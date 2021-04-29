@@ -8,8 +8,23 @@ const progressContainer = document.querySelector(".progress-container");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 
-// Song <Titles>
-const songs = ["Remember That Night", "All I Wanted", "Coastline"];
+// Song Titles
+const songs = [
+  "Coastline",
+  "Remember That Night",
+  "You Dont Know How It Feels",
+  "Miss You",
+  "Wild Child",
+  "Feathered Indians",
+  "Fields of Gold",
+  "Will You",
+  "Golden Embers",
+  "Just Like Leaving",
+  "All I Wanted",
+  "Apparently",
+  "Keep The Wolves Away",
+  "Handful Of Water",
+];
 
 let songIndex = 1;
 
@@ -66,6 +81,14 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
 }
 
+function setProgress(e) {
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+  const duration = audio.duration;
+
+  audio.currentTime = (clickX / width) * duration;
+}
+
 //Event Listeners
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
@@ -82,3 +105,7 @@ prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
+
+progressContainer.addEventListener("click", setProgress);
+
+audio.addEventListener("ended", nextSong);
