@@ -21,6 +21,7 @@ body {
 
 .music-container {
   width: 85%;
+  max-width: 1000px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
@@ -35,9 +36,9 @@ body {
 
 .img-container {
   height: 250px;
-  width: 250px;
   overflow: hidden;
   border-radius: 15px;
+  width: 250px;
 }
 .img-container img {
   height: 300px;
