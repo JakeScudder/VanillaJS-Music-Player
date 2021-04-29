@@ -17,6 +17,7 @@ const songs = [
   "Wild Child",
   "Feathered Indians",
   "Fields Of Gold",
+  "Its Alright",
   "Will You",
   "Golden Embers",
   "Just Like Leaving",
