@@ -16,7 +16,7 @@ const songs = [
   "Miss You",
   "Wild Child",
   "Feathered Indians",
-  "Fields of Gold",
+  "Fields Of Gold",
   "Will You",
   "Golden Embers",
   "Just Like Leaving",
